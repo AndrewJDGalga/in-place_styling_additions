@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --primary: white;
+  --secondary: black;
+  --flavor_bg: #888888;
+  --flavor_edge: #666666;
+  --text-overlay: #EEEEEE;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  height: 100%;
+}
+
+.sb-header {
+  width: 100%;
+  height: 64px;
+  background-color: var(--primary);
+}
+
+.sb-header_logo {
+  height: 32px;
+  width: auto;
+  margin: 16px 0 0 32px;
+}
+
+/*--------------------Login page styling-------------------------*/
+#knack-dist_3.kn-content:has(.kn-login) {
+  width: 100%;
+  height: calc(100% - 64px);
+  /*background: linear-gradient(to right bottom, var(--primary) 5%, var(--secondary));*/
+  background-color: var(--flavor_edge);
+  overflow-y: hidden;
+}
+
+.kn-login .columns {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.kn-scene.kn-container .kn-login.kn-view .columns {
+  margin-top: 50%;
+  transform: translateY(-100%);
+}
+
+.kn-login .columns .column.is-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.view-header {
+  text-align: center;
+}
+
+.column.is-half .kn-login-form  {
+  width: 24em;
+  max-width: 100%;
+}
+
+.control {
+  margin-top: 6px;
+}
+
+#knack-dist_3 .kn-view input[type="submit"].kn-button.is-primary {
+  background-color: var(--primary) !important;
+  border: 2px solid var(--secondary) !important;
+  color: var(--secondary) !important;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+#knack-dist_3:has(.kn-login) .kn-view input[type="submit"].kn-button.is-primary:hover {
+  background-color: var(--secondary) !important;
+  border: 2px solid var(--flavor_bg) !important;
+  color: var(--primary) !important;
+}
+
+.kn-login .kn-description {
+  color: var(--flavor_edge);
+}
+
+.kn-login-form #forgot-pass.ang-link {
+  color: var(--flavor_edge);
+}
+
+.kn-login #email,
+.kn-login #password {
+  background-color: var(--text-overlay);
+  border-color: var(--flavor_edge);
+}
+
+.kn-login #password:active,
+.kn-login #email:active,
+.kn-login #password:hover,
+.kn-login #email:hover,
+.kn-login #password:focus,
+.kn-login #email:focus {
+  background-color: var(--primary);
+}
+
+/*--------------------Sponsored Shows page styling-------------------------*/
+.kn-table.kn-table-table.knTable tbody tr {
+  width: fit-content;
+  text-wrap: nowrap;
+}
+
+/*logout, admin console, search links (in order)*/
+.kn-current_user .kn-log-out,
+.content.kn-rich_text__content p a,
+.kn-button.search
+ {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border-radius: 4px;
+  padding: 6px;
+  border: 2px solid var(--secondary); /*avoid pop effect on hover*/
+}
+
+.kn-current_user .kn-log-out:hover,
+.content.kn-rich_text__content p a:hover,
+.kn-button.search:hover
+{
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+}
+
+.knMenuLink.knMenuLink--tab {
+  margin-bottom: 2px;
+}
+
+/*default view tabs already have acceptable styling, so adding a little pop on hover*/
+.knMenuLink.knMenuLink--tab:hover
+{
+  border: 2px solid var(--secondary);
+  margin-bottom: 0;
+}
+
+/*targets export, add filters, search reset*/
+.kn-records-nav .kn-button.is-small,
+span.reset-container a.reset.kn-button.is-link {
+  border-color: var(--flavor_bg);
+  color: var(--secondary);
+  background-color: var(--text-overlay);
+}
+
+.kn-records-nav .kn-button.is-small:hover,
+span.reset-container a.reset.kn-button.is-link:hover {
+  border-color: var(--text-overlay);
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+/*
+.tag.kn-tag-filter {
+  background-color: var(--flavor_bg);
+}*/
+
+a.kn-edit-filter.link-hover-color {
+  text-decoration: none;
+  color: var(--secondary);
+}
+a.kn-edit-filter.link-hover-color:hover {
+  font-weight: 700;
+  color: var(--secondary);
+}
+/*
+.kn-edit-filter span.field{
+  font-weight: 800;
+}
+.kn-edit-filter span.operator{
+  font-weight: 600;
+}
+.kn-edit-filter span.value{
+  font-weight: 800;
+}*/
+
+/* --view links in tables
+.kn-table-link span .kn-link.kn-link-page {
+  border: none;
+  color: var(--primary);
+  background-color: var(--flavor_bg);
+  padding: 2px;
+  margin: 1px;
+}
+
+.kn-table-link span .kn-link.kn-link-page:hover {
+  border: solid 1px var(--secondary);
+  margin: 0;
+}*/
